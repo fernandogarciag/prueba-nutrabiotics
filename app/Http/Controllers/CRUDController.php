@@ -117,7 +117,7 @@ class CRUDController extends Controller
     {
       $categories = Category::select('id', 'name')->get()->toArray();
       $data = array(
-        'title' => $crud->name . " - Projecto - Editar",
+        'title' => $crud->name . " - Producto - Editar",
         'errors' => array(),
         'product' => $crud->toArray(),
         'categories' => $categories
