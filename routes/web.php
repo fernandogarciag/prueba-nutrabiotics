@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CRUDController;
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Route::view('/', 'welcome');
-Route::get('/', ExampleController::class);
+Route::get('/', function () {return redirect('/productos');});
+Route::get('productos', [FrontController::class, 'index']);
+Route::get('productos/{product}', [FrontController::class, 'show']);
+Route::resource('crud', CRUDController::class);
+Route::post('crud/{crud}', [CRUDController::class, 'duplicate']);

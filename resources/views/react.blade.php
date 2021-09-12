@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8" />
     <link
-      href="favicon.ico"
+      href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
     />
@@ -20,14 +20,15 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>{{ $data['title'] }}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div id="root" data="{{ json_encode($data) }}"></div>
     <div id="modal"></div>
-    <script src="{{ 'js/' . $nameJS . '.js' }}"></script>
-    <script src="js/app.js"></script>
+    <script src="{{ asset('js/' . $nameJS . '.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
